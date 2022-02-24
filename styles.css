@@ -439,3 +439,27 @@ div.sections {
 }
 
 /* MEDIA QUERIES */
+/* Dispositivos Moviles */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+}
+
+/* iPads y Tabletas */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+}
+
+/* Pantallas pequeñas y Portátiles */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+/* Escritorios y Pantallas Grandes */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+
+}
+
+/* Pantallas extragrandes y TV's */
+@media screen and (min-width: 1201px) {
+
+}
