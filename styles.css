@@ -10,7 +10,7 @@
 
 * { box-sizing: border-box; font-family: 'Rubik', sans-serif; }
 
-html, body { height: 100%; }
+html, body { height: 100%; scroll-behavior: smooth;}
 
 body { margin: 0; font-size: 18px; background-color: var(--ligth); }
 
