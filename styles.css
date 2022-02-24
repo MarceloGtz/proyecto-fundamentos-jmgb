@@ -1,0 +1,418 @@
+/* GLOBAL */
+:root {
+    --blue: #34B0BE;
+    --red: #FF4F6F;
+    --green: #003307;
+    --gray: #ADADAD;
+    --ligth: #E5E5E5;
+    --white: #FFFFFF;
+}
+
+* { box-sizing: border-box; font-family: 'Rubik', sans-serif; }
+
+html, body { height: 100%; }
+
+body { margin: 0; font-size: 18px; background-color: var(--ligth); }
+
+h2, h3, h4, h5, h6 { color: var(--red); }
+
+/* TEMPLATE */
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "section";
+}
+
+/* HEADER */
+.header {
+    grid-area: header;
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 2rem;
+}
+
+.header__navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header__navbar li {
+    display: inline-block;
+}
+
+.header__navbar a {
+    margin: 0.5rem 1.5rem;
+}
+
+.header__link--home {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.header__link {
+    text-decoration: none;
+    color: black;
+}
+
+/* MAIN */
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+}
+
+.main__image {
+    display: flex;
+    justify-content: center;
+    align-items: bottom;
+    position: relative;
+    gap: 1rem;
+}
+
+.main__svg {
+    width: 100%;
+    height: auto;
+}
+
+.main__me {
+    position: absolute;
+    height: 600px;
+    left: 0;
+    bottom: 0;
+}
+
+.main__title h2 {
+    font-size: 70px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.main__title h1 {
+    font-size: 150px;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.main__nav {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+}
+
+.main__nav a {
+    border: 1px solid var(--blue);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin-bottom: 15px;
+    margin-right: 2rem;
+}
+
+.main__contact-btn {
+    background-color: var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 50%;
+    border-radius: 0 25px 25px 0;
+}
+
+.main__contact-btn a {
+    padding: 20px 30px;
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--white);
+}
+
+div.sections {
+    margin: 0 auto;
+    width: 95%;
+}
+
+/* SERVICES */
+
+/* <section class="services">
+        <h3 class="services__title">Servicios</h3>
+        <div class="services__nav-arrows">
+            <i class="left"><img src="Íconos/arrow-left 1.svg" alt="Arrow to left"></i>
+            <i class="left"><img src="Íconos/arrow-right 1.svg" alt="Arrow to rigth"></i>
+        </div>
+*/
+.services__navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.services__title {
+    display: inline-block;
+    margin-right: 1rem;
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.services__nav-arrows {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.services__nav-arrows i {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: var(--gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.services__nav-arrows i:active {
+    background-color: var(--red);
+}
+
+.services__nav-arrows img {
+    height: 24px;
+    width: 24px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.card {
+    background-color: var(--white);
+    width: 24%;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.card p {
+    color: var(--gray);
+}
+
+.about {
+    position: relative;
+}
+
+.about__title {
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.about p {
+    color: var(--gray);
+    width: 75%;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.about .vector {
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    top: 0px;
+}
+
+.schools {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.schools div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 3rem auto;
+}
+
+.schools div img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    display: inline-block;
+    border-radius: 7px;
+}
+
+.schools h3, .schools p {
+    text-align: center;
+}
+
+/* ABILITIES */
+.abilities {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.abilities__title {
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.ability {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.number {
+    margin-right: 7rem;
+    margin-left: 4rem;
+    background-color: var(--white);
+    border-radius: 7px;
+    width: 150px;
+    height: 80px;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number h4 {
+    color: var(--blue);
+    display: inline;
+    font-size: 40px;
+}
+
+.number::after {
+    content: "";
+    background-color: var(--blue);
+    width: 120px;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.text h3 {
+    color: black;
+    font-weight: 400;
+    font-size: 45px;
+    letter-spacing: 1.1;
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+/* PORTFOLIO */
+.portafolio {
+
+}
+
+.porta__cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.porta__card {
+    background-color: var(--white);
+    padding-bottom: 10px;
+    text-align: left;
+    width: 23%;
+    border-radius: 0.25rem;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+.porta__img {
+    max-width: 100%;
+}
+
+.porta__text {
+    margin-left: 10px;
+}
+
+/* CONTACT */
+.contact {
+    margin-bottom: 3rem;
+}
+.contact__title {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 400;
+}
+
+.contact__ctn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contact__phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 7px;
+    padding: 2rem 1rem;
+    text-align: center;
+    min-width: 20%;
+}
+
+.contact__phone p {
+    color: var(--gray);
+}
+
+.contact__email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 7px;
+    padding: 2rem 1rem;
+    text-align: center;
+    min-width: 22%;
+}
+
+.contact__email p {
+    color: var(--gray);
+}
+
+/* FOOTER */
+.footer__text {
+    text-align: center;
+    color: var(--blue);
+    font-size: 20px;
+    margin: 3rem 0;
+}
+
+/* MEDIA QUERIES */
