@@ -44,6 +44,10 @@ h2, h3, h4, h5, h6 { color: var(--red); }
     padding: 2rem 0;
 }
 
+.header__navbar input, .header__navbar label {
+    display: none;
+}
+
 .header__navbar ul {
     list-style: none;
     margin: 0;
@@ -93,18 +97,26 @@ h2, h3, h4, h5, h6 { color: var(--red); }
     align-items: bottom;
     position: relative;
     gap: 1rem;
+    flex-basis: 50%;
 }
 
 .main__svg {
     width: 100%;
     height: auto;
+    bottom: 0;
+    left: 0;
+    position: absolute;
 }
 
 .main__me {
     position: absolute;
-    height: 600px;
     left: 0;
     bottom: 0;
+    width: 100%;
+}
+
+.main__title {
+    flex-basis: 50%;
 }
 
 .main__title h2 {
@@ -456,42 +468,51 @@ div.sections {
 /* MEDIA QUERIES */
 /* Dispositivos Moviles */
 @media screen and (min-width: 320px) and (max-width: 480px) {
-    .header__navbar {
+    input#menu { visibility: hidden; }
+    .header__navbar input, .header__navbar label {
+        display: inline;
+    }
+    input#menu~ul {
+        background-color: #333333;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        right: 100%;
+        transition: all 150ms ease-in;
+    }
+    
+    input#menu:checked~ul {
+        right: 0;
+    }
+
+    .header__navbar ul {
+        display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin: 1rem 0;
     }
-    
-    .menu-btn {
-        display: inline-block;
+
+    .header__navbar ul li a {
+        padding: 0.25rem 1rem;
     }
 }
 
 /* iPads y Tabletas */
 @media screen and (min-width: 481px) and (max-width: 768px) {
-    .header__navbar {
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin: 1rem 0;
-    }
-    .menu-btn {
-        display: inline-block;
-    }
+    
 }
 
 /* Pantallas pequeñas y Portátiles */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-
+    
 }
 
 /* Escritorios y Pantallas Grandes */
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
-
+    
 }
 
 /* Pantallas extragrandes y TV's */
 @media screen and (min-width: 1201px) {
-
+    
 }
